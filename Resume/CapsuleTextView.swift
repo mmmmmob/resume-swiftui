@@ -7,23 +7,13 @@
 
 import SwiftUI
 
-extension Color {
-    static var random: Color {
-        return Color(
-            red: .random(in: 0...0.5),
-            green: .random(in: 0...0.5),
-            blue: .random(in: 0...0.5)
-        )
-    }
-}
-
 struct CapsuleTextView: View {
     let skillText: String
     var body: some View {
         ZStack {
             Capsule()
                 .frame(width: 110, height: 30)
-                .foregroundStyle(Color.random)
+                .foregroundStyle(Color.randomDark)
             HStack {
                 Text("\(skillText)")
                     .foregroundStyle(Color.white)

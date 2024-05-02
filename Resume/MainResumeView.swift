@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct MainResumeView: View {
+        
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 
                 // Header
@@ -18,16 +19,18 @@ struct MainResumeView: View {
                         .resizable()
                         .frame(width: 140, height: 140)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
-                    VStack(spacing: 5) {
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 5) {
                         TextSize.headlineText("Theppitak\nManeepong")
+                            .foregroundStyle(Color.randomLight)
                         Rectangle()
                             .fill(Color.gray)
-                            .frame(width: 165, height: 1)
+                            .frame(width: 180, height: 1)
                         TextSize.subHeadlineText("A newcomer at the crossroad\n of tech and creativity.")
                     }
                     .multilineTextAlignment(.trailing)
                 }
-                .padding()
+                .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
                 
                 // Intro
                 TextSize.captionText("Former creative copywriter and project manager, now on my way to becoming a developer. On the right side of my brain lies the love of fun and goofy ways to communicate things, while on the left is the love to find ways to manage unmanageable problems into the perfect march.")
@@ -38,8 +41,8 @@ struct MainResumeView: View {
                     SectionView(sectionText: "👨🏻‍💻 Work Experiences")
                     PositionView(company: "Self-employed", position: "Creative Copywriter", duration: "2023 - Present", url: nil)
                     PositionView(company: "Glow Creative", position: "Project Manager and Operation Management", duration: "2018 - 2022", url: "https://glowyourstory.com")
-                    PositionView(company: "The 101 Percent", position: "Content Creator", duration: "2018 - 2022", url: "https://www.the101.world/author/theppitak/")
-                    PositionView(company: "daypoets", position: "Editorial Writer", duration: "2016 - 2017", url: "https://adaymagazine.com/author/author18/")
+                    PositionView(company: "The 101 Percent", position: "Content Creator", duration: "2017 - 2018", url: "https://www.the101.world/author/theppitak/")
+                    PositionView(company: "daypoets", position: "Editorial Writer", duration: "2015 - 2016", url: "https://adaymagazine.com/author/author18/")
                 }
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
                 
@@ -47,14 +50,14 @@ struct MainResumeView: View {
                 VStack(alignment: .center) {
                     SectionView(sectionText: "📚 Educations")
                     PositionView(company: "Junior Software Developer Bootcamp", position: "Generation Thailand", duration: "Nov 2023 - Feb 2024", url: nil)
-                    PositionView(company: "B.A. Communication Arts\nJournalism", position: "Chulalongkorn University", duration: "2011 - 2014", url: nil)
+                    PositionView(company: "B.A. Communication Arts\nJournalism", position: "Chulalongkorn University", duration: "2011 - 2015", url: nil)
                 }
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
                 
                 // Skills
                 VStack(alignment: .center) {
                     SectionView(sectionText: "⚒️ Skills")
-                    ScrollView(.horizontal) {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         VStack {
                             HStack {
                                 CapsuleTextView(skillText: "Swift")
@@ -77,6 +80,7 @@ struct MainResumeView: View {
                         }
                         .padding()
                     }
+                    .padding()
                 }
                 
                 // Contacts
@@ -97,6 +101,7 @@ struct MainResumeView: View {
                 TextSize.footerText("© 2024 Theppitak M.")
             }
         }
+        .padding(.top, 1)
     }
 }
 #Preview {
