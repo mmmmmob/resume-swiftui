@@ -1,6 +1,9 @@
 # Personal Resume
 
-![screeshot](/Demo/screenshot.png)
+<p>
+  <img src="/Demo/screenshot.png" height="400" />
+  <img src="/Demo/live.gif" height="400" />
+</p>
 
 This project focuses on practicing essential SwiftUI syntaxes:
 
@@ -11,5 +14,3 @@ This project focuses on practicing essential SwiftUI syntaxes:
 - Handling optional values safely.
 
 **_For code improvement and refactoring details, check the [commit history](https://github.com/mmmmmob/swift-playground/commits/main/_Projects/Resume/Resume) in another repository._**
-
-![live](/Demo/live.gif)
