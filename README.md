@@ -1,8 +1,8 @@
 # Personal Resume
 
 <p>
-  <img src="/Demo/screenshot.png" height="400" />
-  <img src="/Demo/live.gif" height="400" />
+  <img src="/Demo/screenshot.png" height="300" />
+  <img src="/Demo/live.gif" height="300" />
 </p>
 
 This project focuses on practicing essential SwiftUI syntaxes:
