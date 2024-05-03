@@ -13,7 +13,6 @@ struct SectionView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text("\(sectionText)")
                 .font(.system(.title2, design: .rounded, weight: .semibold))
-                .foregroundStyle(Color.randomLight)
             Rectangle()
                 .fill(Color.gray)
                 .frame(width: UIScreen.screenWidth / 1.05, height: 1)
