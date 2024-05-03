@@ -16,13 +16,13 @@ struct MainResumeView: View {
             VStack {
                 
                 // Header
-                VStack {
+                VStack(alignment: .center) {
                     HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/,spacing: 20) {
+                        Spacer()
                         Image("profilePic")
                             .resizable()
                             .frame(width: 140, height: 140)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
-                        Spacer()
                         VStack(alignment: .trailing, spacing: 5) {
                             TextSize.headlineText("Theppitak\nManeepong")
                                 .foregroundStyle(colorScheme == .dark ? Color.randomLight : Color.randomDark)
@@ -32,14 +32,14 @@ struct MainResumeView: View {
                             TextSize.subHeadlineText("A newcomer at the crossroad\n of tech and creativity.")
                         }
                         .multilineTextAlignment(.trailing)
+                        Spacer()
                     }
-                    .padding(EdgeInsets(top: 10, leading: 25, bottom: 10, trailing: 25))
-                    
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     // Intro
                     TextSize.captionText("Former creative copywriter and project manager, now on my way to becoming a developer. On the right side of my brain lies the love of fun and goofy ways to communicate things, while on the left is the love to find ways to manage unmanageable problems into the perfect march.")
-                        .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25))
+                        .padding(.horizontal, 25)
                 }
-        
+
                 // Work
                 VStack(alignment: .center) {
                     SectionView(sectionText: "👨🏻‍💻 Work Experiences")
